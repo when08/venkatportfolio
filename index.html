@@ -1,173 +1,200 @@
 <!DOCTYPE HTML>
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<!--[if !IE]><html><![endif]-->
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>venkatraman-portfolio</title>
+		<title>venkatraman profile</title>
+		
 		<!-- Viewport meta tag to prevent iPhone from scaling our page -->
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		
-		<link rel="stylesheet" href="style.css"/>
+		<link rel="stylesheet" href="./css/style.css"/>
 		
 		<!-- Normalize hide address bar for iOS and Android -->
 		<script src="./js/hideaddressbar.js"></script>
 		
+		<!-- Add media query support for IE8 and under. Must place media queries in external stylesheet -->
+		<script src="./js/respond.min.js"></script>
+		
+		<!-- Using picturefill to load conditional images and matchmedia to provide support for IE8 and below + older browsers -->
+		<script src="./js/picturefill.js"></script>
+		<script src="./js/matchmedia.js"></script>
+		
 		<!--[if lt IE 9]>
-			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="./js/html5.js"></script>
 		<![endif]-->
 			
-	<style type="text/css" media="all">
-	
-	#nav,#masthead,#content,#colophon {
-		margin: 0 18px;
-	}
-	
-	#masthead {
-		color:#fff;
-	}
-	#container-nav {
-		background:#fff;
-	}
-	
-	#container-header {
-		background:#352a38;
-		height: 350px;
-		width:100%;
-	}
-	
-	#container-content {
-		padding: 24px 0;
-	}
-	
-	#container-footer {
-		padding: 32px 0;
-		background:#352a38;
-		color:#eee;
-		font-weight:100;
-	}
-	.box {
-		padding:14px;
-	}
-	
-	img {
-		max-width:100%;
-	}
-	
-	</style>
-				
+			<!--[if lt IE 9]>
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+			<![endif]-->
+
+			<!--[if IE 8]>
+			<script src="./js/checkbox.js"></script>
+			<![endif]-->
+			
+			<!--[if IE 6]>
+				<script src="./js/selectivizr-min.js"></script>
+			<![endif]-->
+			
 	</head>
 
 	<body lang="en">
-		<!--Add opening <section> tag below here-->
 		<div id="container-nav">
-		  <section id="nav">
-			<h3>Venkatraman</h3>
-			<!--Add opening <nav> tag below here-->
-				<!--
-				<ul>
-					<li>Portfolio</li>
-					<li>Resume</li>
-					<li>LinkedIn Profile</li>
-					<li>Contact</li>
-				</ul>
-			-->
-			<!--Add closing <nav> tag above here-->
-		  </section>
-		</div>	
-		<!--Add opening <header> tag below here-->
-		<div id="container-header">
-		   <header id="masthead">
-			<h1>Hi, I'm Venkatraman</h1>
-
-			<h2>Team-oriented professional with around 4 years of experience in Publishing Domain. 
-			My technological forte were Adobe Indesign, Adobe Acrobat using Pitstop Pro, 
-		        Adobe Photoshop, HTML5, CSS3 and Working in MAC Machine.</h2>
-		  </header>
+			<section id="nav" class="group wrapper">
+				<h3>Venkatraman</h3>
+		        <!-- Checkbox Hack markup -->
+		        <input type="checkbox" id="toggle" />
+		        <label for="toggle" onclick>Menu</label>
+		        <!-- /Checkbox Hack markup -->
+		        <nav>
+		            <ul>
+		                <li><a href="#portfolio">Portfolio</a></li>
+		                <li><a href="#resume">Resume</a></li>
+		                <li><a href="./">LinkedIn Profile</a></li> <!-- No destination yet -->
+		                <li><a href="#contact">Contact</a></li>
+		            </ul>
+		        </nav>
+				
+			
+			</section>
 		</div>
-		<!--Add opening <article> tag below here-->
+		<div id="container-header">
+			<header id="masthead" class="wrapper">
+				<figure id="maya"> 
+				    <div data-picture data-alt="Maya Chopra">
+				        <div data-src="img/headshot-s.png"></div>
+				        <div data-src="img/headshot-m.png" data-media="(min-width: 45em)"></div>
+				        <div data-src="img/headshot-l.png" data-media="(min-width: 60em)"></div>
+				        <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+				        <noscript>
+				            <img src="img/headshot-s.png" alt="Maya Chopra">
+				        </noscript>
+				    </div>
+				</figure>
+				
+					<h1>Hi, I'm Venkatraman</h1>
+
+					<h2>Team-oriented professional with around 4 years of experience in Publishing Domain. 
+					My technological forte were Adobe Indesign, Adobe Acrobat using Pitstop Pro, 
+		     		   Adobe Photoshop, HTML5, CSS3 and Working in MAC Machine.</h2>
+			</header>
+		</div>
 		<div id="container-content">
 			<article id="content">
-			<!--Add opening <section> tag below here-->
-				<section>
-				<!--Add opening <header> tag below here-->
-					<header>
-					<h3>My Works</h3>
-
-					<p>Some of the things I've been working on lately</p>
+			
+				<section id="portfolio" class="group">
+				
+					<header class="wrapper">
+						<h3>My Portfolio</h3>
+						<p>Some of the things I've been working on lately</p>
 					</header>
-				<!--Add closing <header> tag above here-->
-					<h4>Book Covers</h4>
-					<!--Add opening <figure> tag below here-->
-						
-						<img src="./img/vitamin-t.png">	
+					<article class="group wrapper">
+					    <h4>Book Covers</h4>
+					        <a href="/work/vitamin-t/">
+					            <figure>
+					                <img src="./img/vitamin-t.png" alt="vitamin t homepage">	
+					            </figure>
+					        </a>
+					</article>
 					
-					<!--Add closing <figure> tag above here-->
-					<h4>Logo Design</h4>
-						<!--Add opening <figure> tag below here-->
-						<img src="./img/robohead.png">
-						<!--Add closing <figure> tag above here-->
-					<h4>Business and advertising</h4>
-						<!--Add opening <figure> tag below here-->
-						<img src="./img/shareist.png">
-						<!--Add closing <figure> tag above here-->
+				<article class="group wrapper">
+				<h4>Logo Design</h4>
+						<a href="/work/robohead/">
+							<figure>
+								<img src="./img/robohead.png" alt="Robohead iPad App">
+							</figure>
+						</a>
+				</article>
+				<article class="group wrapper">
+				<h4>Business and advertising</h4>
+						<a href="/work/shareist/">
+							<figure>
+								<img src="./img/shareist.png" alt="Shareist homepage">
+							</figure>
+						</a>
+				</article>
+				
 				</section>
-				<!--Add closing <section> tag above here-->
-				<!--Add opening <section> tag below here-->
-				<section>
-				<!--Add opening <header> tag below here-->	
-					<header>
-					<h3>My Resume</h3>
+				
+				<section id="resume" class="group">
+			
+						<header class="wrapper">
+							<h3>My Resume</h3>
+							<p>Current/previous positions and skill set</p>
+						</header>
+					<article class="wrapper">	
+					<div class="box">
+						<h4>Currently</h4>
 
-					<p>Current/previous positions and skill set</p>
-					</header>
-				<!--Add closing <header> tag above here-->
-				<div class="box">	
-					<h4>Currently</h4>
+						<h5>Composer/paginator/Graphic Designer</h5>
 
-					<h5>Composer/paginator</h5>
+						<h6>Jouveindia</h6>
 
-					<h6>Jouveindia</h6>
-
-					<p>Custom books Like Baseline, Database, PCL. 
+						<p>Custom books Like Baseline, Database, PCL. 
 			           	Trade Books comes under the category fiction and 
 				  	 working for the customer like Little Brown, Grand Central 
 				   	and different types of products like TP, MM, Reprint, LP, HC.</p>
-				</div>
-				<div class="box">	
-					<h4>Previously</h4>
+					</div>
+					</article>
+					<article class="wrapper">
+					<div class="box">
+							<h4>Previously</h4>
 
-					<h5>Smile program from HTC</h5>
+							<h5>Smile program from HTC</h5>
 
-					<h6>HTC Global Services</h6>
+							<h6>HTC Global Services</h6>
 
-					<p>Enrolled in “SMILE” Program in HTC global service and learnt SQL and MYSQL 
+							<p>Enrolled in “SMILE” Program in HTC global service and learnt SQL and MYSQL 
 				 	from their live project is basically training a graduate to make ready for the 
 					corporate world.</p>
-				</div>
-				<div class="box">	
-					<h4>Skills</h4>
+
+					</div>
+					</article>
+					<article class="wrapper">
+					<div class="box">
+						<h4>Skills</h4>
 
 					<ul>
 						<li>Indesign, Photoshop, and Illustrator</li>
 						<li>HTML5 &amp; CSS3</li>
 						<li>Responsive Web Design</li>
 					</ul>
-				</div>	
-				<!--Add opening <footer> tag below here-->
-				<footer>				
-					<p>For a full work history, have a look at my LinkedIn Profile</p>
-				</footer>
-				<!--Add closing <footer> tag above here-->
-			</section>
-			<!--Add closing <section> tag above here-->
-			</article>	
-			<!--Add closing <article> tag above here-->
+
+					</div>
+					</article>
+						<footer class="wrapper">
+							<p>For a full work history, have a look at my LinkedIn Profile</p>
+						</footer>
+			
+				</section>
+		
+			</article>
 		</div>
-		<!--Add opening <footer> tag below here-->
 		<div id="container-footer">
-			<footer id="footer">	
-				<p>©2015 all rights reserved.</p>
+			<form id="contact">
+			    <fieldset class="wrapper">
+			        <legend>Contact</legend>
+			            <ul class="group">
+			                <li class="name">
+			                    <label for="name">Your Name</label>
+			                    <input type="text" id="name" name="name" />
+			                </li>
+			                <li class="email">
+			                    <label for="email">Your Email</label>
+			                    <input type="email" id="email" name="email" />
+			                </li>
+			                <li class="message">
+			                    <label for="message">Say Hello</label>
+			                    <textarea id="message" name="message"></textarea>
+			                </li>
+			            </ul>
+			        <input class="send" type="submit" name="submit" value="Send" />
+			    </fieldset>
+			</form>           
+			<footer id="colophon" class="wrapper">
+				<p>©2013 all rights reserved. </p>
 			</footer>
-		<!--Add closing <footer> tag above here-->
-		</div>
+		</div>	
 	</body>
 </html>
